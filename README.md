@@ -3,6 +3,7 @@
 Hello! This is my Rails Todo Project!
 
 - Emilie
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
