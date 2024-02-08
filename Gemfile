@@ -53,7 +53,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem "sqlite3", "~> 1.4"
+
 end
 
 group :development do
@@ -72,6 +72,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem "sqlite3", "~> 1.4"
 
 
 end
@@ -79,6 +80,6 @@ end
 group :production do
   gem "pg", "~> 0.21.0"
   gem "rails_12factor", "~> 0.0.3"
-  gem "sqlite3", "~> 1.4"
+
 end
 
