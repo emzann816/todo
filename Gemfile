@@ -28,7 +28,6 @@ gem "jbuilder"
 gem 'bootstrap', '~> 5.3.2'
 
 gem 'jquery-rails'
-gem "sqlite3", "~> 1.4"
 gem 'sass-rails', '>= 5'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -72,6 +71,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem "sqlite3", "~> 1.4"
 
 end
 
