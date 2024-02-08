@@ -1,0 +1,20 @@
+<%= form_for(@list) do |form| %>
+  <% if @list.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@list.errors.count, "error") %> prohibited this list from being saved:</h2>
+
+      <ul>
+        <% @list.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="d-flex mt-1">
+    Add New List Item:
+   <% form.label :description, style: "display: block" %>
+    <%= form.text_field :description, class: "form-control me-2" %>
+    <%= form.submit "Add Todo Item", class: "btn btn-outline-secondary" %>
+  </div>
+<% end %>

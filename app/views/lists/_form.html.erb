@@ -1,27 +1,27 @@
-<%= form_with(model: list) do |form| %>
-  <% if list.errors.any? %>
+<%= form_for(@list) do |form| %>
+  <% if @list.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(list.errors.count, "error") %> prohibited this list from being saved:</h2>
+      <h2><%= pluralize(@list.errors.count, "error") %> prohibited this list from being saved:</h2>
 
       <ul>
-        <% list.errors.each do |error| %>
+        <% @list.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
+  <div class="form-group">
+    <%= form.text_field :description, class: "form-control" %>
   </div>
-
-  <div>
-    <%= form.label :completed, style: "display: block" %>
-    <%= form.check_box :completed %>
+<br/>
+  <div class="form-group form-check">
+    <%= form.label :completed, class: "form-check-input" %>
+    <%= form.check_box :completed, class: "form-check-input" %>
   </div>
+  <br/>
 
-  <div>
-    <%= form.submit %>
+  <div class="actions">
+    <%= form.submit "Update Todo Item", class: "btn btn-secondary" %>
   </div>
 <% end %>
