@@ -79,5 +79,6 @@ end
 group :production do
   gem "pg", "~> 0.21.0"
   gem "rails_12factor", "~> 0.0.3"
+  gem "sqlite3", "~> 1.4"
 end
 
